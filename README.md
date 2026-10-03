@@ -4,19 +4,21 @@ A responsive, interactive portfolio website for Yash Rathee, Software Engineer (
 
 ## Features
 
-- Animated particle-network background that reacts to the mouse
-- Typing hero, scroll-triggered reveals, animated stat counters
-- 3D tilt and spotlight effect on cards
-- Experience timeline, project showcase, animated filterable skills grid
-- Dark/light theme toggle (remembered between visits)
-- Scroll progress bar, mobile menu, copy-email button
+- 3D animated hero (React Three Fiber) with a professional, recruiter-friendly layout
+- Smooth scrolling (Lenis), custom cursor, scroll-triggered reveals and counters
+- Bento "About" grid, scroll-drawn experience timeline
+- Horizontal-scroll project showcase (stacks vertically on small screens)
+- Interactive 3D skills globe
+- Fully responsive from 320px phones to large desktops
+- Auto-deploys to GitHub Pages on every push to `main`
 
 ## Tech Stack
 
-- React 18
-- Vite
+- React 18 + Vite
 - Framer Motion
-- Plain CSS (variables, no UI framework)
+- Three.js via React Three Fiber / Drei
+- Lenis smooth scroll
+- Plain CSS
 
 ## Getting Started
 
@@ -30,20 +32,17 @@ npm run preview   # preview the production build
 ## Structure
 
 ```
-Portfolio/
-├── index.html
-├── vite.config.js
-└── src/
-    ├── main.jsx
-    ├── App.jsx
-    ├── data.js            # all content (experience, projects, skills)
-    ├── index.css
-    ├── hooks/hooks.js     # theme, typing, scroll-spy
-    └── components/
-        ├── Background.jsx # particle canvas + cursor glow
-        ├── Nav.jsx
-        ├── Sections.jsx
-        └── ui.jsx         # Reveal, Tilt, Counter
+src/
+├── App.jsx
+├── data.js              # all content (projects, experience, skills)
+├── index.css
+├── hooks/hooks.js       # smooth scroll, media queries, scroll-spy, clock
+└── components/
+    ├── Hero.jsx, Hero3D.jsx
+    ├── Nav.jsx, Loader.jsx, Cursor.jsx, Marquee.jsx
+    ├── About.jsx, Experience.jsx, Projects.jsx, Skills.jsx
+    ├── Contact.jsx      # achievements, contact, footer
+    └── ui.jsx           # Reveal, Card, Magnetic, Counter
 ```
 
 ## Customizing

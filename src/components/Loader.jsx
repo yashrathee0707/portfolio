@@ -8,10 +8,10 @@ export default function Loader({ onDone }) {
 
   useEffect(() => {
     const c = animate(0, 100, {
-      duration: 2.2,
+      duration: 0.8,
       ease: [0.65, 0, 0.35, 1],
       onUpdate: v => setN(Math.round(v)),
-      onComplete: () => setTimeout(onDone, 200),
+      onComplete: () => setTimeout(onDone, 50),
     })
     return () => c.stop()
   }, [onDone])
@@ -20,7 +20,7 @@ export default function Loader({ onDone }) {
     <motion.div
       className="loader"
       exit={{ y: '-100%' }}
-      transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+      transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
     >
       <div className="loader-top">
         <span>Yash Rathee</span>

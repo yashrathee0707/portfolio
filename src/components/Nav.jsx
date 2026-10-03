@@ -33,7 +33,7 @@ export default function Nav({ ready }) {
         className="nav"
         initial={{ y: -90, opacity: 0 }}
         animate={ready ? { y: 0, opacity: 1 } : {}}
-        transition={{ duration: 1, delay: 0.5, ease }}
+        transition={{ duration: 0.6, delay: 0.2, ease }}
       >
         <a href="#top" className="logo" onClick={e => go(e, 'top')}>YR<i>.</i></a>
         <nav className="pill">

@@ -11,7 +11,7 @@ export function Reveal({ as = 'div', delay = 0, y = 40, children, ...rest }) {
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.9, delay, ease }}
+      transition={{ duration: 0.6, delay, ease }}
       {...rest}
     >
       {children}
