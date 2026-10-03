@@ -1,0 +1,24 @@
+{
+  "name": "yash-rathee-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.99.7",
+    "@react-three/fiber": "^8.15.19",
+    "framer-motion": "^11.11.0",
+    "lenis": "^1.1.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.160.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^4.5.5"
+  }
+}
